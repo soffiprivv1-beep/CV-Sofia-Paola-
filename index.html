@@ -1,119 +1,539 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
-
-<title>Mi Perfil Profesional</title>
-
-<link rel="stylesheet"
-href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal profesional de Sofía Paola - Líder, Creativa y Analítica">
+    <meta name="author" content="Sofía Paola">
+    <title>Sofía Paola | Portal Profesional Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Loader Inicial -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-circle"></div>
+            <span class="loader-text">Sofia Paola</span>
+        </div>
+    </div>
 
-<header>
+    <!-- Cursor Elegante -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-<h1>Sofi Rodríguez</h1>
+    <!-- Fondo Dinámico con Partículas -->
+    <div class="background-container">
+        <div class="particles" id="particles"></div>
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+    </div>
 
-<p>
-Liderazgo • Creatividad • Ciencia • Arte
-</p>
+    <!-- Navbar Fija -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Sofia</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-</header>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-profile">
+                <div class="profile-circle">
+                    <div class="profile-image-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='100' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-size='80' font-weight='bold' text-anchor='middle' dy='.3em' fill='white' font-family='Arial'%3ESP%3C/text%3E%3C/svg%3E" alt="Sofía Paola">
+                    </div>
+                    <div class="profile-ring"></div>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title" data-text="SOFÍA PAOLA">
+                    <span class="hero-char">S</span>
+                    <span class="hero-char">O</span>
+                    <span class="hero-char">F</span>
+                    <span class="hero-char">Í</span>
+                    <span class="hero-char">A</span>
+                    <span class="hero-char"> </span>
+                    <span class="hero-char">P</span>
+                    <span class="hero-char">A</span>
+                    <span class="hero-char">O</span>
+                    <span class="hero-char">L</span>
+                    <span class="hero-char">A</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="subtitle-word">Líder</span>
+                    <span class="subtitle-separator">•</span>
+                    <span class="subtitle-word">Creativa</span>
+                    <span class="subtitle-separator">•</span>
+                    <span class="subtitle-word">Analítica</span>
+                </div>
+                <p class="hero-tagline">"Transformando ideas en impacto"</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})">
+                        <span>Ver mi trayectoria</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        <span>Descargar CV</span>
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
 
-<section>
+    <!-- SOBRE MÍ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card glass-effect">
+                        <p class="about-description">
+                            Soy una persona con perfil analítico, creativo y orientado al liderazgo. Me interesa desarrollar proyectos que integren investigación, innovación y expresión artística para generar impacto positivo.
+                        </p>
+                        <p class="about-description">
+                            Disfruto aprender constantemente, resolver desafíos y convertir ideas en experiencias que inspiren a otras personas.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Años Experiencia</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Proyectos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Compromiso</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-wrapper glass-effect">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:0.2' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:0.2' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='400' fill='url(%23grad2)' rx='20'/%3E%3Ccircle cx='150' cy='120' r='60' fill='%232563EB' opacity='0.3'/%3E%3Crect x='50' y='220' width='200' height='150' rx='10' fill='%237C3AED' opacity='0.2'/%3E%3C/svg%3E" alt="Ilustración">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>Sobre mí</h2>
+    <!-- PERFIL VOCACIONAL -->
+    <section class="vocational" id="vocational">
+        <div class="container">
+            <h2 class="section-title">Mi Perfil Vocacional</h2>
+            <div class="vocational-grid">
+                <div class="vocational-card glass-effect">
+                    <div class="vocational-icon">🧠</div>
+                    <h3 class="vocational-title">Analítico</h3>
+                    <p class="vocational-description">Investigación, pensamiento lógico y solución de problemas.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="vocational-card glass-effect">
+                    <div class="vocational-icon">🚀</div>
+                    <h3 class="vocational-title">Emprendedor</h3>
+                    <p class="vocational-description">Liderazgo, estrategia y visión para crear oportunidades.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="vocational-card glass-effect">
+                    <div class="vocational-icon">🎨</div>
+                    <h3 class="vocational-title">Creativo</h3>
+                    <p class="vocational-description">Expresión, innovación y comunicación visual.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="vocational-card glass-effect">
+                    <div class="vocational-icon">❤️</div>
+                    <h3 class="vocational-title">Social</h3>
+                    <p class="vocational-description">Impacto positivo, empatía y conexión humana.</p>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>
-Soy una persona creativa, analítica y con visión de liderazgo.
-Me interesa la investigación, el arte y generar impacto positivo.
-Busco construir proyectos que inspiren y transformen.
-</p>
+    <!-- HABILIDADES -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Liderazgo</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Investigación</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Creatividad</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Comunicación</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Arte</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Pensamiento Lógico</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">Empatía</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- EXPERIENCIA Y PROYECTOS -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia y Proyectos</h2>
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item left" data-year="2024">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-effect">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="timeline-title">Escritura Creativa</h3>
+                        <p class="timeline-description">Participación escolar y desarrollo literario con enfoque en narrativa innovadora.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Escritura</span>
+                            <span class="tag">Literatura</span>
+                            <span class="tag">Narrativa</span>
+                        </div>
+                    </div>
+                </div>
 
-<section>
+                <!-- Item 2 -->
+                <div class="timeline-item right" data-year="2024">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-effect">
+                        <div class="timeline-year">2024</div>
+                        <h3 class="timeline-title">Proyecto Nebula</h3>
+                        <p class="timeline-description">Aplicación emocional innovadora enfocada en bienestar digital y experiencia del usuario.</p>
+                        <div class="timeline-tech">
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">UX Design</span>
+                        </div>
+                    </div>
+                </div>
 
-<h2>Mi Perfil Vocacional</h2>
+                <!-- Item 3 -->
+                <div class="timeline-item left" data-year="2023">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-effect">
+                        <div class="timeline-year">2023</div>
+                        <h3 class="timeline-title">Investigación Continua</h3>
+                        <p class="timeline-description">Investigación y aprendizaje continuo en metodologías de investigación y análisis de datos.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Análisis</span>
+                            <span class="tag">Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="cards">
+    <!-- ÁREAS DE INTERÉS -->
+    <section class="interests" id="interests">
+        <div class="container">
+            <h2 class="section-title">Áreas de Interés</h2>
+            <div class="interests-grid">
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">🔬</div>
+                    <h3>Ciencias</h3>
+                    <p>Investigación y descubrimiento</p>
+                    <div class="interest-glow"></div>
+                </div>
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">🎭</div>
+                    <h3>Arte y Cultura</h3>
+                    <p>Expresión y creatividad</p>
+                    <div class="interest-glow"></div>
+                </div>
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">💼</div>
+                    <h3>Negocios</h3>
+                    <p>Estrategia e innovación</p>
+                    <div class="interest-glow"></div>
+                </div>
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">🔍</div>
+                    <h3>Investigación</h3>
+                    <p>Análisis profundo</p>
+                    <div class="interest-glow"></div>
+                </div>
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">📚</div>
+                    <h3>Educación</h3>
+                    <p>Aprendizaje y enseñanza</p>
+                    <div class="interest-glow"></div>
+                </div>
+                <div class="interest-card glass-effect">
+                    <div class="interest-icon">💻</div>
+                    <h3>Tecnología</h3>
+                    <p>Innovación digital</p>
+                    <div class="interest-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-🧠 Analítica
-</div>
+    <!-- CERTIFICACIONES -->
+    <section class="certifications" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-dashboard">
+                <div class="cert-card glass-effect">
+                    <div class="cert-icon">🏆</div>
+                    <h3>Capacitación en Comercio</h3>
+                    <p class="cert-description">Formación en estrategias comerciales y gestión de negocios</p>
+                    <div class="cert-status">Completado</div>
+                </div>
+                <div class="cert-card glass-effect">
+                    <div class="cert-icon">👥</div>
+                    <h3>Liderazgo</h3>
+                    <p class="cert-description">Desarrollo de habilidades de liderazgo y gestión de equipos</p>
+                    <div class="cert-status">Completado</div>
+                </div>
+                <div class="cert-card glass-effect">
+                    <div class="cert-icon">💬</div>
+                    <h3>Comunicación</h3>
+                    <p class="cert-description">Técnicas avanzadas de comunicación efectiva</p>
+                    <div class="cert-status">Completado</div>
+                </div>
+                <div class="cert-card glass-effect">
+                    <div class="cert-icon">⚙️</div>
+                    <h3>Tecnología</h3>
+                    <p class="cert-description">Certificaciones en desarrollo web y herramientas digitales</p>
+                    <div class="cert-status">En Progreso</div>
+                </div>
+                <div class="cert-card glass-effect">
+                    <div class="cert-icon">🎨</div>
+                    <h3>Arte</h3>
+                    <p class="cert-description">Formación en diseño, fotografía y expresión artística</p>
+                    <div class="cert-status">En Progreso</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-🎨 Creativa
-</div>
+    <!-- METAS FUTURAS -->
+    <section class="goals" id="goals">
+        <div class="container">
+            <h2 class="section-title">Metas Futuras</h2>
+            <div class="goals-container">
+                <div class="goals-timeline">
+                    <div class="goal-item">
+                        <div class="goal-marker"></div>
+                        <div class="goal-content glass-effect">
+                            <h3>Inspirar a otras personas</h3>
+                            <p>Crear contenido y experiencias que motiven a otros a alcanzar sus metas</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-marker"></div>
+                        <div class="goal-content glass-effect">
+                            <h3>Enseñar</h3>
+                            <p>Compartir conocimientos y ayudar en el desarrollo profesional de otros</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-marker"></div>
+                        <div class="goal-content glass-effect">
+                            <h3>Crear proyectos innovadores</h3>
+                            <p>Desarrollar soluciones que combinen tecnología, arte y impacto social</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-marker"></div>
+                        <div class="goal-content glass-effect">
+                            <h3>Desarrollar habilidades</h3>
+                            <p>Aprender continuamente y dominar nuevas disciplinas</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="goal-marker"></div>
+                        <div class="goal-content glass-effect">
+                            <h3>Generar impacto positivo</h3>
+                            <p>Contribuir significativamente al mundo y a las personas que me rodean</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-🚀 Emprendedora
-</div>
+    <!-- GALERÍA -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="1">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g1)'/%3E%3C/svg%3E" alt="Galería 1">
+                    <div class="gallery-overlay">Proyecto 1</div>
+                </div>
+                <div class="gallery-item" data-image="2">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23EC4899;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g2)'/%3E%3C/svg%3E" alt="Galería 2">
+                    <div class="gallery-overlay">Proyecto 2</div>
+                </div>
+                <div class="gallery-item" data-image="3">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23EC4899;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g3)'/%3E%3C/svg%3E" alt="Galería 3">
+                    <div class="gallery-overlay">Proyecto 3</div>
+                </div>
+                <div class="gallery-item" data-image="4">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23EC4899;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g4)'/%3E%3C/svg%3E" alt="Galería 4">
+                    <div class="gallery-overlay">Proyecto 4</div>
+                </div>
+                <div class="gallery-item" data-image="5">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g5' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232563EB;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g5)'/%3E%3C/svg%3E" alt="Galería 5">
+                    <div class="gallery-overlay">Proyecto 5</div>
+                </div>
+                <div class="gallery-item" data-image="6">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cdefs%3E%3ClinearGradient id='g6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23EC4899;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='300' fill='url(%23g6)'/%3E%3C/svg%3E" alt="Galería 6">
+                    <div class="gallery-overlay">Proyecto 6</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- CONTACTO -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card glass-effect">
+                        <h3>Conecta Conmigo</h3>
+                        <p>Estoy siempre abierta a nuevas oportunidades y colaboraciones.</p>
+                        <div class="social-links">
+                            <a href="https://github.com" class="social-btn" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:sofia@example.com" class="social-btn" title="Correo">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://linkedin.com" class="social-btn" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com" class="social-btn" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form glass-effect" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Tu nombre" required>
+                            <span class="form-focus"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Tu correo" required>
+                            <span class="form-focus"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                            <span class="form-focus"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2026 Sofía Paola</p>
+                <p>Diseñado para construir mi futuro profesional</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-credit">
+                <p>Crafted with <span class="heart">✨</span> for excellence</p>
+            </div>
+        </div>
+    </footer>
 
-<section>
+    <!-- Botón Volver Arriba -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<h2>Áreas de interés</h2>
-
-<ul>
-
-<li>Ciencias</li>
-
-<li>Arte y Cultura</li>
-
-<li>Negocios</li>
-
-<li>Investigación</li>
-
-<li>Educación</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>Objetivo Profesional</h2>
-
-<p>
-
-Inspirar a otros a reflexionar,
-aprender y superarse mediante
-ideas, investigación y creatividad.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Cursos</h2>
-
-<button onclick="mostrar()">
-
-Ver cursos
-
-</button>
-
-<div id="cursos">
-
-</div>
-
-</section>
-
-<script src="script.js">
-
-</script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
